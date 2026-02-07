@@ -28,13 +28,13 @@
       <div class="col-lg-2 col-md-6 mb-4">
         <h3 class="h5 fw-bold mb-4">
           <i class="fas fa-link me-2" aria-hidden="true"></i>
-          Enlaces
+          {{ translationService.t('footer.quickLinks') }}
         </h3>
         <ul class="list-unstyled">
-          @for (link of quickLinks(); track link.name) {
+          @for (link of quickLinks(); track link.nameKey) {
             <li class="mb-2">
-              <a [href]="link.url" class="footer-link" [attr.aria-label]="link.name">
-                <i class="fas fa-angle-right me-2" aria-hidden="true"></i>{{ link.name }}
+              <a [href]="link.url" class="footer-link" [attr.aria-label]="translationService.t(link.nameKey)">
+                <i class="fas fa-angle-right me-2" aria-hidden="true"></i>{{ translationService.t(link.nameKey) }}
               </a>
             </li>
           }
@@ -45,12 +45,12 @@
       <div class="col-lg-3 col-md-6 mb-4">
         <h3 class="h5 fw-bold mb-4">
           <i class="fas fa-phone me-2" aria-hidden="true"></i>
-          Contacto
+          {{ translationService.t('footer.contact') }}
         </h3>
         <ul class="list-unstyled contact-info">
           <li class="mb-3">
             <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>
-            <span>Villa Nueva, Guatemala</span>
+            <span>{{ translationService.t('footer.addressText') }}</span>
           </li>
           <li class="mb-3">
             <i class="fas fa-phone-alt me-2" aria-hidden="true"></i>
@@ -61,10 +61,6 @@
             <a href="mailto:info@canterburyguatemala.edu.gt" class="footer-link">
               info&#64;canterbury.edu.gt
             </a>
-          </li>
-          <li class="mb-3">
-            <i class="fas fa-clock me-2" aria-hidden="true"></i>
-            <span>Lun - Vie: 7:00 AM - 5:00 PM</span>
           </li>
         </ul>
       </div>
@@ -95,13 +91,13 @@
       <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
         <p class="mb-0 small">
           &copy; {{ currentYear() }} Colegio Episcopal Canterbury Villanovano. 
-          Todos los derechos reservados.
+          {{ translationService.t('footer.allRightsReserved') }}
         </p>
       </div>
       <div class="col-md-6 text-center text-md-end">
         <p class="mb-0 small">
           <i class="fas fa-heart text-danger" aria-hidden="true"></i>
-          Desarrollado con excelencia educativa
+          {{ translationService.t('footer.followUs') }}
         </p>
       </div>
     </div>

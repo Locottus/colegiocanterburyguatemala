@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 interface SocialLink {
   name: string;
@@ -7,7 +8,7 @@ interface SocialLink {
 }
 
 interface QuickLink {
-  name: string;
+  nameKey: string;
   url: string;
 }
 
@@ -19,6 +20,8 @@ interface QuickLink {
 })
 export class Footer {
   currentYear = signal(new Date().getFullYear());
+  
+  constructor(public translationService: TranslationService) {}
   
   socialLinks = signal<SocialLink[]>([
     {
@@ -44,11 +47,10 @@ export class Footer {
   ]);
   
   quickLinks = signal<QuickLink[]>([
-    { name: 'Inicio', url: '#inicio' },
-    { name: 'Nosotros', url: '#nosotros' },
-    { name: 'Niveles', url: '#niveles' },
-    { name: 'Noticias', url: '#noticias' },
-    { name: 'Admisiones', url: '#contacto' },
-    { name: 'Contacto', url: '#contacto' }
+    { nameKey: 'nav.home', url: '#inicio' },
+    { nameKey: 'nav.about', url: '#nosotros' },
+    { nameKey: 'nav.levels', url: '#niveles' },
+    { nameKey: 'news.title', url: '#noticias' },
+    { nameKey: 'nav.contact', url: '#contacto' }
   ]);
 }

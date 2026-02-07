@@ -1,9 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 interface InstitutionalInfoItem {
   icon: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
 }
 
 @Component({
@@ -13,21 +14,22 @@ interface InstitutionalInfoItem {
   styleUrl: './institutional-info.css'
 })
 export class InstitutionalInfo {
+  constructor(public translationService: TranslationService) {}
   institutionalInfo = signal<InstitutionalInfoItem[]>([
     {
       icon: 'fas fa-bullseye fa-3x text-primary-custom',
-      title: 'Misión',
-      description: 'Formar estudiantes con excelencia académica, valores cristianos y compromiso social, capaces de enfrentar los desafíos del mundo moderno con integridad y liderazgo.'
+      titleKey: 'institutional.mission',
+      descriptionKey: 'institutional.missionText'
     },
     {
       icon: 'fas fa-eye fa-3x text-secondary-custom',
-      title: 'Visión',
-      description: 'Ser reconocidos como una institución educativa líder en Guatemala, destacada por la calidad educativa, innovación pedagógica y formación de ciudadanos íntegros.'
+      titleKey: 'institutional.vision',
+      descriptionKey: 'institutional.visionText'
     },
     {
       icon: 'fas fa-heart fa-3x text-danger',
-      title: 'Valores',
-      description: 'Integridad, Respeto, Excelencia, Responsabilidad, Solidaridad y Fe. Estos principios guían nuestra comunidad educativa en cada acción y decisión.'
+      titleKey: 'institutional.values',
+      descriptionKey: 'institutional.valuesText'
     }
   ]);
 

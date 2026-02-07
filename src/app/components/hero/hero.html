@@ -5,14 +5,14 @@
       <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
           <img src="logo.png" alt="Colegio Episcopal Canterbury Villanovano Logo" class="hero-logo mb-4 mx-auto d-block" style="max-width: 120px;" />
-          <h1 class="display-3 fw-bold text-white mb-4 fade-in">Bienvenidos a Colegio Episcopal Canterbury Villanovano</h1>
-          <p class="lead text-white mb-5 fade-in">Institución educativa comprometida con la excelencia académica y la formación integral de nuestros estudiantes en Villa Nueva, Guatemala</p>
+          <h1 class="display-3 fw-bold text-white mb-4 fade-in">{{ translationService.t('hero.title') }}</h1>
+          <p class="lead text-white mb-5 fade-in">{{ translationService.t('hero.subtitle') }}</p>
           <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="#nosotros" class="btn btn-light btn-lg px-5 py-3 fade-in" aria-label="Conocer Más">
-              Conocer Más <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+            <a href="#nosotros" class="btn btn-light btn-lg px-5 py-3 fade-in" [attr.aria-label]="translationService.t('hero.knowMore')">
+              {{ translationService.t('hero.knowMore') }} <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
             </a>
-            <a href="#niveles" class="btn btn-outline-light btn-lg px-5 py-3 fade-in" aria-label="Nuestros Niveles">
-              Nuestros Niveles <i class="fas fa-book-open ms-2" aria-hidden="true"></i>
+            <a href="#niveles" class="btn btn-outline-light btn-lg px-5 py-3 fade-in" [attr.aria-label]="translationService.t('hero.ourLevels')">
+              {{ translationService.t('hero.ourLevels') }} <i class="fas fa-book-open ms-2" aria-hidden="true"></i>
             </a>
           </div>
         </div>

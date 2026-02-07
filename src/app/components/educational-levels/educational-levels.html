@@ -3,34 +3,34 @@
     <div class="row mb-5">
       <div class="col-12 text-center">
         <h2 class="display-4 fw-bold text-primary-custom mb-3">
-          <i class="fas fa-graduation-cap me-3" aria-hidden="true"></i>Niveles Educativos
+          <i class="fas fa-graduation-cap me-3" aria-hidden="true"></i>{{ translationService.t('educationalLevels.title') }}
         </h2>
-        <p class="lead text-muted">Ofrecemos educación de calidad en todos los niveles</p>
+        <p class="lead text-muted">{{ translationService.t('educationalLevels.subtitle') }}</p>
         <div class="divider mx-auto"></div>
       </div>
     </div>
     
     <div class="row g-4">
-      @for (level of educationalLevels(); track level.title) {
+      @for (level of educationalLevels(); track level.titleKey) {
         <div class="col-lg-3 col-md-6">
           <div class="level-card card h-100" [style.border-top]="'4px solid ' + level.color">
             <div class="card-body text-center p-4">
               <div class="level-icon mb-3" [style.background]="level.color">
                 <i [class]="level.icon" aria-hidden="true"></i>
               </div>
-              <h3 class="h5 fw-bold mb-3">{{ level.title }}</h3>
-              <p class="text-muted small mb-3">{{ level.ages }}</p>
+              <h3 class="h5 fw-bold mb-3">{{ translationService.t(level.titleKey) }}</h3>
+              <p class="text-muted small mb-3">{{ translationService.t(level.agesKey) }}</p>
               <ul class="list-unstyled text-start mb-4">
-                @for (feature of level.features; track feature) {
+                @for (featureKey of level.featuresKeys; track featureKey) {
                   <li class="mb-2">
                     <i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i>
-                    <span class="small">{{ feature }}</span>
+                    <span class="small">{{ translationService.t(featureKey) }}</span>
                   </li>
                 }
               </ul>
               <a href="#contacto" class="btn btn-outline-primary-custom btn-sm w-100"
-                 [attr.aria-label]="'Más información sobre ' + level.title">
-                <i class="fas fa-info-circle me-2" aria-hidden="true"></i>Más Info
+                 [attr.aria-label]="translationService.t('news.readMore')">
+                <i class="fas fa-info-circle me-2" aria-hidden="true"></i>{{ translationService.t('news.readMore') }}
               </a>
             </div>
           </div>

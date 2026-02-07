@@ -1,11 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 interface EducationalLevelItem {
-  title: string;
-  ages: string;
+  titleKey: string;
+  agesKey: string;
   icon: string;
   color: string;
-  features: string[];
+  featuresKeys: string[];
 }
 
 @Component({
@@ -15,57 +16,51 @@ interface EducationalLevelItem {
   styleUrl: './educational-levels.css'
 })
 export class EducationalLevels {
+  constructor(public translationService: TranslationService) {}
+
   educationalLevels = signal<EducationalLevelItem[]>([
     {
-      title: 'Párvulos',
-      ages: '4-6 años',
+      titleKey: 'educationalLevels.preschool',
+      agesKey: 'educationalLevels.preschoolAges',
       icon: 'fas fa-baby fa-3x',
       color: '#ff6b9d',
-      features: [
-        'Estimulación temprana',
-        'Desarrollo psicomotor',
-        'Juegos educativos',
-        'Música y arte',
-        'Ambiente seguro'
+      featuresKeys: [
+        'educationalLevels.preschoolFeatures.0',
+        'educationalLevels.preschoolFeatures.1',
+        'educationalLevels.preschoolFeatures.2'
       ]
     },
     {
-      title: 'Primaria',
-      ages: '7-12 años',
+      titleKey: 'educationalLevels.primary',
+      agesKey: 'educationalLevels.primaryAges',
       icon: 'fas fa-child fa-3x',
       color: '#4dabf7',
-      features: [
-        'Educación bilingüe',
-        'Matemáticas y ciencias',
-        'Lectura y escritura',
-        'Tecnología educativa',
-        'Deportes y cultura'
+      featuresKeys: [
+        'educationalLevels.primaryFeatures.0',
+        'educationalLevels.primaryFeatures.1',
+        'educationalLevels.primaryFeatures.2'
       ]
     },
     {
-      title: 'Básico',
-      ages: '13-15 años',
+      titleKey: 'educationalLevels.secondary',
+      agesKey: 'educationalLevels.secondaryAges',
       icon: 'fas fa-user-graduate fa-3x',
       color: '#20c997',
-      features: [
-        'Programa académico sólido',
-        'Desarrollo de habilidades',
-        'Orientación vocacional',
-        'Proyectos de investigación',
-        'Liderazgo estudiantil'
+      featuresKeys: [
+        'educationalLevels.secondaryFeatures.0',
+        'educationalLevels.secondaryFeatures.1',
+        'educationalLevels.secondaryFeatures.2'
       ]
     },
     {
-      title: 'Diversificado',
-      ages: '16-18 años',
+      titleKey: 'educationalLevels.highschool',
+      agesKey: 'educationalLevels.highschoolAges',
       icon: 'fas fa-graduation-cap fa-3x',
       color: '#8b2635',
-      features: [
-        'Bachillerato en Ciencias',
-        'Preparación universitaria',
-        'Prácticas profesionales',
-        'Proyectos de servicio',
-        'Certificaciones'
+      featuresKeys: [
+        'educationalLevels.highschoolFeatures.0',
+        'educationalLevels.highschoolFeatures.1',
+        'educationalLevels.highschoolFeatures.2'
       ]
     }
   ]);

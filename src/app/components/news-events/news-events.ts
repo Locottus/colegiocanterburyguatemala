@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 interface NewsEventItem {
   id: number;
@@ -17,6 +18,7 @@ interface NewsEventItem {
   styleUrl: './news-events.css'
 })
 export class NewsEvents {
+  constructor(public translationService: TranslationService) {}
   newsEvents = signal<NewsEventItem[]>([
     {
       id: 1,
