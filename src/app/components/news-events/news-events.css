@@ -1,0 +1,150 @@
+section {
+  background-color: #f8f9fa;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+.news-card {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: white;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.news-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image {
+  transform: scale(1.1);
+}
+
+.news-image-container .badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 8px 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body small {
+  font-size: 0.8rem;
+}
+
+.btn-outline-primary-custom {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary-custom:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive optimizations - Mobile First */
+/* Móvil pequeño (hasta 576px) */
+@media (max-width: 575.98px) {
+  .news-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .news-image-container {
+    height: 200px;
+  }
+  
+  .news-image-container .badge {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .card-body h5 {
+    font-size: 1.1rem !important;
+    line-height: 1.4;
+  }
+  
+  .card-body p {
+    font-size: 0.9rem !important;
+  }
+  
+  .card-body small {
+    font-size: 0.75rem !important;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet (576px - 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .news-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .news-image-container {
+    height: 220px;
+  }
+}
+
+/* Tablet grande (768px - 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .news-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .news-image-container {
+    height: 200px;
+  }
+}
+
+/* Optimización de hover para touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .news-card:hover {
+    transform: none;
+  }
+  
+  .news-card:active {
+    transform: translateY(-5px);
+    transition: transform 0.1s ease;
+  }
+  
+  .news-card:hover .news-image {
+    transform: none;
+  }
+}

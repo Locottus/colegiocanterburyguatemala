@@ -1,0 +1,114 @@
+<footer id="contacto" class="footer bg-primary-custom text-white">
+  <div class="container">
+    <div class="row py-5">
+      <!-- Información del Colegio -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <img src="logo.png" alt="Colegio Episcopal Canterbury Villanovano Logo" class="footer-logo me-3">
+          <h3 class="h5 fw-bold mb-0">Colegio Episcopal Canterbury Villanovano</h3>
+        </div>
+        <p class="mb-3">
+          Institución educativa privada comprometida con la excelencia académica 
+          y la formación integral desde Párvulos hasta Diversificado.
+        </p>
+        <div class="social-links">
+          @for (social of socialLinks(); track social.name) {
+            <a [href]="social.url" 
+               [attr.aria-label]="'Visitar ' + social.name" 
+               class="social-link me-3"
+               target="_blank"
+               rel="noopener noreferrer">
+              <i [class]="social.icon" aria-hidden="true"></i>
+            </a>
+          }
+        </div>
+      </div>
+      
+      <!-- Enlaces Rápidos -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h3 class="h5 fw-bold mb-4">
+          <i class="fas fa-link me-2" aria-hidden="true"></i>
+          Enlaces
+        </h3>
+        <ul class="list-unstyled">
+          @for (link of quickLinks(); track link.name) {
+            <li class="mb-2">
+              <a [href]="link.url" class="footer-link" [attr.aria-label]="link.name">
+                <i class="fas fa-angle-right me-2" aria-hidden="true"></i>{{ link.name }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h3 class="h5 fw-bold mb-4">
+          <i class="fas fa-phone me-2" aria-hidden="true"></i>
+          Contacto
+        </h3>
+        <ul class="list-unstyled contact-info">
+          <li class="mb-3">
+            <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>
+            <span>Villa Nueva, Guatemala</span>
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-phone-alt me-2" aria-hidden="true"></i>
+            <a href="tel:+50212345678" class="footer-link">+(502) 1234-5678</a>
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+            <a href="mailto:info@canterburyguatemala.edu.gt" class="footer-link">
+              info&#64;canterbury.edu.gt
+            </a>
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-clock me-2" aria-hidden="true"></i>
+            <span>Lun - Vie: 7:00 AM - 5:00 PM</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Horarios -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h3 class="h5 fw-bold mb-4">
+          <i class="fas fa-calendar-alt me-2" aria-hidden="true"></i>
+          Horarios
+        </h3>
+        <div class="schedule-card p-3 mb-3">
+          <p class="mb-2 fw-semibold">
+            <i class="fas fa-school me-2" aria-hidden="true"></i>Clases
+          </p>
+          <p class="small mb-0">Lunes a Viernes<br>7:30 AM - 2:30 PM</p>
+        </div>
+        <div class="schedule-card p-3">
+          <p class="mb-2 fw-semibold">
+            <i class="fas fa-user-tie me-2" aria-hidden="true"></i>Atención Padres
+          </p>
+          <p class="small mb-0">Lunes a Viernes<br>8:00 AM - 4:00 PM</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="row border-top border-light pt-4 pb-3">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <p class="mb-0 small">
+          &copy; {{ currentYear() }} Colegio Episcopal Canterbury Villanovano. 
+          Todos los derechos reservados.
+        </p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0 small">
+          <i class="fas fa-heart text-danger" aria-hidden="true"></i>
+          Desarrollado con excelencia educativa
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Botón Scroll to Top -->
+  <a href="#inicio" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </a>
+</footer>

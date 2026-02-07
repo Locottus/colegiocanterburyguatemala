@@ -1,0 +1,265 @@
+.footer {
+  position: relative;
+  padding-top: 3rem;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.footer h3 {
+  color: white !important;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: white;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.social-link:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: start;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info i {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.schedule-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.schedule-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.scroll-to-top:hover {
+  background: white;
+  color: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive optimizations - Mobile First */
+/* Móvil pequeño (hasta 576px) */
+@media (max-width: 575.98px) {
+  .footer {
+    padding-top: 2rem;
+  }
+  
+  .footer h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .footer p, .footer li {
+    font-size: 0.9rem;
+  }
+  
+  .footer-logo {
+    height: 40px;
+  }
+  
+  .social-links {
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-link {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+  
+  .contact-info {
+    padding-left: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .footer-link {
+    display: block;
+    padding: 0.5rem 0;
+  }
+  
+  .schedule-card {
+    margin-bottom: 1rem;
+    padding: 1rem !important;
+  }
+  
+  .scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* Centrar contenido en móvil */
+  .footer .col-md-3,
+  .footer .col-md-4 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .footer .col-md-3:last-child,
+  .footer .col-md-4:last-child {
+    margin-bottom: 1rem;
+  }
+  
+  .footer h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet (576px - 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer {
+    padding-top: 2.5rem;
+  }
+  
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+  
+  .footer-logo {
+    height: 45px;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.05rem;
+  }
+  
+  .scroll-to-top {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Dos columnas en tablet */
+  .footer .col-md-3,
+  .footer .col-md-4 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Tablet grande (768px - 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer {
+    padding-top: 2.75rem;
+  }
+  
+  .footer h3 {
+    font-size: 1.25rem;
+  }
+  
+  .social-link {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .scroll-to-top {
+    width: 50px;
+    height: 50px;
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+/* Desktop (992px en adelante) */
+@media (min-width: 992px) {
+  .footer {
+    padding-top: 3rem;
+  }
+  
+  .footer .col-md-3,
+  .footer .col-md-4 {
+    text-align: left;
+  }
+  
+  .social-links {
+    justify-content: flex-start;
+  }
+}

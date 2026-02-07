@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#" aria-label="Colegio Canterbury - Inicio">
+  <img src="logo.png" alt="Colegio Episcopal Canterbury Villanovano Logo" class="navbar-logo me-2">
+  <span class="fw-bold"></span>
+    </a>
+    
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Alternar menú de navegación"
+      (click)="toggleMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#inicio" aria-label="Ir a Inicio">
+            <i class="fas fa-home me-1" aria-hidden="true"></i>Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nosotros" aria-label="Ir a Nosotros">
+            <i class="fas fa-info-circle me-1" aria-hidden="true"></i>Nosotros
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#niveles" aria-label="Ir a Niveles Educativos">
+            <i class="fas fa-book me-1" aria-hidden="true"></i>Niveles
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto" aria-label="Ir a Contacto">
+            <i class="fas fa-envelope me-1" aria-hidden="true"></i>Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

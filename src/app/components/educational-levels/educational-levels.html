@@ -1,0 +1,63 @@
+<section id="niveles" class="py-5 bg-white">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="display-4 fw-bold text-primary-custom mb-3">
+          <i class="fas fa-graduation-cap me-3" aria-hidden="true"></i>Niveles Educativos
+        </h2>
+        <p class="lead text-muted">Ofrecemos educación de calidad en todos los niveles</p>
+        <div class="divider mx-auto"></div>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      @for (level of educationalLevels(); track level.title) {
+        <div class="col-lg-3 col-md-6">
+          <div class="level-card card h-100" [style.border-top]="'4px solid ' + level.color">
+            <div class="card-body text-center p-4">
+              <div class="level-icon mb-3" [style.background]="level.color">
+                <i [class]="level.icon" aria-hidden="true"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-3">{{ level.title }}</h3>
+              <p class="text-muted small mb-3">{{ level.ages }}</p>
+              <ul class="list-unstyled text-start mb-4">
+                @for (feature of level.features; track feature) {
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i>
+                    <span class="small">{{ feature }}</span>
+                  </li>
+                }
+              </ul>
+              <a href="#contacto" class="btn btn-outline-primary-custom btn-sm w-100"
+                 [attr.aria-label]="'Más información sobre ' + level.title">
+                <i class="fas fa-info-circle me-2" aria-hidden="true"></i>Más Info
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="cta-card card text-center p-5">
+          <h3 class="h3 fw-bold text-primary-custom mb-3">
+            <i class="fas fa-clipboard-list me-2" aria-hidden="true"></i>
+            ¿Listo para inscribirte?
+          </h3>
+          <p class="lead text-muted mb-4">
+            Únete a nuestra comunidad educativa y brinda a tu hijo(a) la mejor educación
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#contacto" class="btn btn-primary-custom btn-lg" aria-label="Iniciar proceso de inscripción">
+              <i class="fas fa-pen-to-square me-2" aria-hidden="true"></i>Inscribirme Ahora
+            </a>
+            <a href="#contacto" class="btn btn-outline-primary-custom btn-lg" aria-label="Solicitar más información">
+              <i class="fas fa-phone me-2" aria-hidden="true"></i>Solicitar Info
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

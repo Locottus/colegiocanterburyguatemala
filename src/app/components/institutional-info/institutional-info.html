@@ -1,0 +1,66 @@
+<section id="nosotros" class="py-5">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="display-4 fw-bold text-primary-custom mb-3">
+          <i class="fas fa-university me-3" aria-hidden="true"></i>Nosotros
+        </h2>
+        <p class="lead text-muted">Conoce nuestra identidad institucional</p>
+        <div class="divider mx-auto"></div>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      @for (info of institutionalInfo(); track info.title) {
+        <div class="col-lg-4 col-md-6">
+          <div class="info-card card h-100 text-center p-4">
+            <div class="icon-wrapper mb-4">
+              <i [class]="info.icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="h4 fw-bold mb-3">{{ info.title }}</h3>
+            <p class="text-muted">{{ info.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="about-card card p-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <h3 class="h2 fw-bold text-primary-custom mb-4">
+                <i class="fas fa-building me-2" aria-hidden="true"></i>
+                Colegio Episcopal Canterbury Villanovano
+              </h3>
+              <p class="text-muted mb-3">
+                Somos una institución educativa privada ubicada en Villa Nueva, Guatemala, 
+                comprometida con la excelencia académica y la formación integral de nuestros estudiantes.
+              </p>
+              <p class="text-muted mb-3">
+                Ofrecemos educación desde el nivel de Párvulos hasta Diversificado, 
+                con un enfoque en valores cristianos y desarrollo de habilidades para el siglo XXI.
+              </p>
+              <p class="text-muted">
+                Nuestro personal docente altamente calificado y nuestras instalaciones modernas 
+                proporcionan un ambiente seguro y estimulante para el aprendizaje.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="features-list">
+                @for (feature of features(); track feature) {
+                  <div class="feature-item d-flex align-items-center mb-3">
+                    <div class="feature-icon me-3">
+                      <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    </div>
+                    <span class="fw-medium">{{ feature }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

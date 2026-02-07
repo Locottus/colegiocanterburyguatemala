@@ -1,0 +1,147 @@
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+.level-card {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.level-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.level-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: var(--primary-color);
+}
+
+.level-icon i {
+  color: white;
+}
+
+.level-card:hover .level-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.cta-card {
+  background: linear-gradient(135deg, rgba(26, 58, 92, 0.05) 0%, rgba(139, 38, 53, 0.05) 100%);
+  border: 2px dashed var(--border-light);
+  border-radius: 15px;
+}
+
+.btn-lg {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+/* Responsive optimizations - Mobile First */
+/* Móvil pequeño (hasta 576px) */
+@media (max-width: 575.98px) {
+  .level-card {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .level-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .level-icon i {
+    font-size: 1.75rem !important;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .card-body h3 {
+    font-size: 1.15rem !important;
+  }
+  
+  .card-body p {
+    font-size: 0.9rem !important;
+  }
+  
+  .gap-3 {
+    gap: 0.5rem !important;
+  }
+  
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .cta-card {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Tablet (576px - 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .level-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .level-icon {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .level-icon i {
+    font-size: 2.25rem !important;
+  }
+  
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Tablet grande (768px - 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .level-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .level-icon {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .level-icon i {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Optimización para mejorar el tap target en móvil */
+@media (max-width: 767.98px) {
+  .level-card {
+    min-height: auto;
+    touch-action: manipulation;
+  }
+  
+  .btn {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+}
