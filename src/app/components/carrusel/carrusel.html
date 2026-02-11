@@ -1,0 +1,105 @@
+<section id="galeria" class="carousel-section" aria-label="Galería de imágenes del colegio">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title fade-in">{{ translationService.t('carousel.title') }}</h2>
+        <div class="title-underline mx-auto"></div>
+        <p class="section-subtitle mt-3 fade-in">{{ translationService.t('carousel.subtitle') }}</p>
+      </div>
+    </div>
+
+    <div class="carousel-container"
+         (mouseenter)="onMouseEnter()"
+         (mouseleave)="onMouseLeave()"
+         (touchstart)="onTouchStart($event)"
+         (touchend)="onTouchEnd($event)"
+         role="region"
+         aria-label="Carrusel de imágenes">
+      
+      <!-- Indicador de carga -->
+      @if (images().length === 0) {
+        <div class="carousel-loading">
+          <div class="spinner"></div>
+          <p>Cargando galería...</p>
+        </div>
+      }
+
+      <!-- Slides del carrusel -->
+      @if (images().length > 0) {
+        <div class="carousel-slides">
+          @for (image of images(); track image.src; let i = $index) {
+            <div class="carousel-slide"
+                 [class.active]="currentIndex() === i"
+                 [class.prev]="currentIndex() === (i + 1) % images().length"
+                 [class.next]="currentIndex() === (i - 1 + images().length) % images().length"
+                 [attr.aria-hidden]="currentIndex() !== i">
+              
+              <!-- Skeleton loader -->
+              @if (!image.loaded) {
+                <div class="image-skeleton"></div>
+              }
+
+              <img 
+                [src]="image.src" 
+                [alt]="image.alt"
+                [class.loaded]="image.loaded"
+                (load)="onImageLoad(i)"
+                loading="lazy"
+                class="carousel-image" />
+
+              <!-- Overlay con gradiente -->
+              <div class="slide-overlay"></div>
+            </div>
+          }
+        </div>
+
+        <!-- Controles de navegación -->
+        <div class="carousel-controls">
+          <button 
+            class="carousel-btn prev-btn" 
+            (click)="prevSlide()"
+            [disabled]="isTransitioning()"
+            aria-label="Imagen anterior">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          
+          <button 
+            class="carousel-btn next-btn" 
+            (click)="nextSlide()"
+            [disabled]="isTransitioning()"
+            aria-label="Imagen siguiente">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Indicadores de puntos -->
+        <div class="carousel-indicators" role="group" aria-label="Indicadores de diapositivas">
+          @for (image of images(); track image.src; let i = $index) {
+            <button 
+              class="indicator-dot"
+              [class.active]="currentIndex() === i"
+              (click)="goToSlide(i)"
+              [attr.aria-label]="'Ir a imagen ' + (i + 1)"
+              [attr.aria-current]="currentIndex() === i ? 'true' : 'false'">
+            </button>
+          }
+        </div>
+
+        <!-- Control de pausa/reproducción -->
+        <button 
+          class="carousel-play-pause"
+          (click)="togglePause()"
+          [attr.aria-label]="isPaused() ? 'Reproducir carrusel' : 'Pausar carrusel'">
+          <i [class]="isPaused() ? 'fas fa-play' : 'fas fa-pause'" aria-hidden="true"></i>
+        </button>
+
+        <!-- Contador de imágenes -->
+        <div class="carousel-counter" aria-live="polite" aria-atomic="true">
+          <span>{{ currentIndex() + 1 }}</span>
+          <span class="counter-separator">/</span>
+          <span>{{ images().length }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

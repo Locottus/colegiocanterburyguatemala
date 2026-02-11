@@ -4,6 +4,7 @@ import { Header } from './components/header/header';
 import { Hero } from './components/hero/hero';
 import { InstitutionalInfo } from './components/institutional-info/institutional-info';
 import { EducationalLevels } from './components/educational-levels/educational-levels';
+import { Carrusel } from './components/carrusel/carrusel';
 import { NewsEvents } from './components/news-events/news-events';
 import { Footer } from './components/footer/footer';
 
@@ -15,6 +16,7 @@ import { Footer } from './components/footer/footer';
     Hero,
     InstitutionalInfo,
     EducationalLevels,
+    Carrusel,
     NewsEvents,
     Footer
   ],

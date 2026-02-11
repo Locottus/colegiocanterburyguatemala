@@ -99,6 +99,10 @@ export class TranslationService {
         event: 'Evento',
         readMore: 'Leer más'
       },
+      carousel: {
+        title: 'Galería de Imágenes',
+        subtitle: 'Descubre nuestras instalaciones y momentos especiales'
+      },
       footer: {
         contact: 'Contacto',
         address: 'Dirección',
@@ -162,6 +166,10 @@ export class TranslationService {
         news: 'News',
         event: 'Event',
         readMore: 'Read more'
+      },
+      carousel: {
+        title: 'Image Gallery',
+        subtitle: 'Discover our facilities and special moments'
       },
       footer: {
         contact: 'Contact',
@@ -227,6 +235,10 @@ export class TranslationService {
         event: 'Événement',
         readMore: 'Lire la suite'
       },
+      carousel: {
+        title: 'Galerie d\'Images',
+        subtitle: 'Découvrez nos installations et moments spéciaux'
+      },
       footer: {
         contact: 'Contact',
         address: 'Adresse',
@@ -291,6 +303,10 @@ export class TranslationService {
         event: 'Evento',
         readMore: 'Leia mais'
       },
+      carousel: {
+        title: 'Galeria de Imagens',
+        subtitle: 'Descubra nossas instalações e momentos especiais'
+      },
       footer: {
         contact: 'Contato',
         address: 'Endereço',
@@ -354,6 +370,10 @@ export class TranslationService {
         news: 'Nachricht',
         event: 'Veranstaltung',
         readMore: 'Mehr lesen'
+      },
+      carousel: {
+        title: 'Bildergalerie',
+        subtitle: 'Entdecken Sie unsere Einrichtungen und besonderen Momente'
       },
       footer: {
         contact: 'Kontakt',
