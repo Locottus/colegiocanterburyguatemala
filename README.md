@@ -199,7 +199,7 @@ Para contribuir al proyecto:
 
 - **Dirección:** Villa Nueva, Guatemala
 - **Teléfono:** +(502) 1234-5678
-- **Email:** info@canterbury.edu.gt
+- **Email:** info@colegiocanterburyguatemala.com
 - **Horario:** Lunes a Viernes: 7:00 AM - 5:00 PM
 
 ---

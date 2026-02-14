@@ -1,13 +1,5 @@
 [
-    {
-      id: 1,
-      type: 'noticia',
-      title: 'Excelentes Resultados en Exámenes Nacionales 2026',
-      excerpt: 'Nuestros estudiantes obtuvieron calificaciones sobresalientes en las pruebas nacionales, posicionándonos entre los mejores colegios de la región.',
-      date: '1 Feb 2026',
-      author: 'Dirección Académica',
-      image: '/carrousel/G9VVrA1WMAApzsk.jpg'
-    },
+
     {
       id: 2,
       type: 'evento',

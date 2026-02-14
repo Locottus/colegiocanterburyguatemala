@@ -36,24 +36,24 @@ export class Carrusel implements OnInit, OnDestroy {
     this.stopAutoPlay();
   }
 
-  private loadImages(): void {
-    // Lista de imágenes en la carpeta public/carrousel
-    // Para actualizaciones dinámicas sin rebuild, solo agrega el nombre del archivo aquí
-    const imageFiles = [
-      'G9VVrA1WMAApzsk.jpg',
-      'lobi.JPG',
-      'lobo.JPG',
-      'maclay.JPG',
-      'rexTie.jpg'
-    ];
+  private async loadImages(): Promise<void> {
+    try {
+      // Cargar dinámicamente la lista de imágenes desde el archivo JSON
+      const response = await fetch('/carrousel/images.json');
+      const data = await response.json();
+      
+      const loadedImages: CarouselImage[] = data.images.map((file: string) => ({
+        src: `/carrousel/${file}`,
+        alt: `Imagen del Colegio Canterbury - ${file.split('.')[0]}`,
+        loaded: false
+      }));
 
-    const loadedImages: CarouselImage[] = imageFiles.map(file => ({
-      src: `/carrousel/${file}`,
-      alt: `Imagen del Colegio Canterbury - ${file.split('.')[0]}`,
-      loaded: false
-    }));
-
-    this.images.set(loadedImages);
+      this.images.set(loadedImages);
+    } catch (error) {
+      console.error('Error al cargar las imágenes del carrusel:', error);
+      // Fallback: usar lista por defecto en caso de error
+      this.images.set([]);
+    }
   }
 
   protected onImageLoad(index: number): void {

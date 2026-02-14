@@ -61,7 +61,8 @@
                 </div>
                 <h3 class="h5 fw-bold mb-3">{{ item.title }}</h3>
                 <p class="text-muted small mb-3">{{ item.excerpt }}</p>
-                <a href="#" class="btn btn-outline-primary-custom btn-sm w-100"
+                <!-- Botón 'read more' oculto -->
+                <a href="#" class="btn btn-outline-primary-custom btn-sm w-100 d-none"
                    [attr.aria-label]="translationService.t('news.readMore') + ' ' + item.title">
                   <i class="fas fa-arrow-right me-2" aria-hidden="true"></i>{{ translationService.t('news.readMore') }}
                 </a>
@@ -71,7 +72,7 @@
         }
       </div>
       
-      <div class="row mt-5">
+      <div class="row mt-5 d-none">
         <div class="col-12 text-center">
           <button class="btn btn-primary-custom btn-lg" aria-label="Ver todas las noticias">
             <i class="fas fa-th-list me-2" aria-hidden="true"></i>Ver Todas las Noticias
