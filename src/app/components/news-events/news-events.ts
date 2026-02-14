@@ -23,6 +23,8 @@ export class NewsEvents implements OnInit {
   newsEvents = signal<NewsEventItem[]>([]);
   isLoading = signal<boolean>(true);
   error = signal<string | null>(null);
+  selectedItem = signal<NewsEventItem | null>(null);
+  showModal = signal<boolean>(false);
 
   ngOnInit(): void {
     this.loadNewsEvents();
@@ -39,8 +41,8 @@ export class NewsEvents implements OnInit {
       }
       
       const text = await response.text();
-      // Evaluar el contenido del archivo JS como JSON
-      const events = eval(text) as NewsEventItem[];
+      // Parsear el contenido del archivo JSON
+      const events = JSON.parse(text) as NewsEventItem[];
       
       this.newsEvents.set(events);
     } catch (err) {
@@ -60,6 +62,27 @@ export class NewsEvents implements OnInit {
       ]);
     } finally {
       this.isLoading.set(false);
+    }
+  }
+
+  protected openModal(item: NewsEventItem): void {
+    this.selectedItem.set(item);
+    this.showModal.set(true);
+    // Evitar scroll del body cuando el modal está abierto
+    document.body.style.overflow = 'hidden';
+  }
+
+  protected closeModal(): void {
+    this.showModal.set(false);
+    this.selectedItem.set(null);
+    // Restaurar scroll del body
+    document.body.style.overflow = '';
+  }
+
+  protected onModalBackdropClick(event: MouseEvent): void {
+    // Cerrar solo si se hace clic en el backdrop, no en el contenido
+    if (event.target === event.currentTarget) {
+      this.closeModal();
     }
   }
 }

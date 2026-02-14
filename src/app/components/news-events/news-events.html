@@ -40,7 +40,8 @@
       <div class="row g-4">
         @for (item of newsEvents(); track item.id) {
           <div class="col-lg-4 col-md-6">
-            <article class="news-card card h-100">
+            <article class="news-card card h-100" (click)="openModal(item)" role="button" tabindex="0" 
+                     (keydown.enter)="openModal(item)" (keydown.space)="openModal(item)">
               <div class="news-image-container">
                 <img [src]="item.image" [alt]="item.title" class="card-img-top news-image">
                 <span class="badge" [class.bg-primary-custom]="item.type === 'noticia'" 
@@ -61,11 +62,6 @@
                 </div>
                 <h3 class="h5 fw-bold mb-3">{{ item.title }}</h3>
                 <p class="text-muted small mb-3">{{ item.excerpt }}</p>
-                <!-- Botón 'read more' oculto -->
-                <a href="#" class="btn btn-outline-primary-custom btn-sm w-100 d-none"
-                   [attr.aria-label]="translationService.t('news.readMore') + ' ' + item.title">
-                  <i class="fas fa-arrow-right me-2" aria-hidden="true"></i>{{ translationService.t('news.readMore') }}
-                </a>
               </div>
             </article>
           </div>
@@ -82,4 +78,42 @@
     }
   </div>
 </section>
+
+<!-- Modal for expanded view -->
+@if (showModal() && selectedItem()) {
+  <div class="modal-backdrop" (click)="onModalBackdropClick($event)" role="dialog" aria-modal="true" 
+       [attr.aria-label]="selectedItem()?.title">
+    <div class="modal-content-wrapper">
+      <button class="modal-close-btn" (click)="closeModal()" aria-label="Cerrar modal">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      
+      <div class="modal-image-section">
+        <img [src]="selectedItem()?.image" [alt]="selectedItem()?.title" class="modal-image">
+        <span class="modal-badge" 
+              [class.bg-primary-custom]="selectedItem()?.type === 'noticia'" 
+              [class.bg-secondary-custom]="selectedItem()?.type === 'evento'">
+          <i [class]="selectedItem()?.type === 'noticia' ? 'fas fa-newspaper' : 'fas fa-calendar-alt'" 
+             class="me-2" aria-hidden="true"></i>
+          {{ selectedItem()?.type === 'noticia' ? translationService.t('news.news') : translationService.t('news.event') }}
+        </span>
+      </div>
+      
+      <div class="modal-info-section">
+        <div class="modal-meta">
+          <span class="modal-meta-item">
+            <i class="fas fa-calendar me-2" aria-hidden="true"></i>{{ selectedItem()?.date }}
+          </span>
+          <span class="modal-meta-item">
+            <i class="fas fa-user me-2" aria-hidden="true"></i>{{ selectedItem()?.author }}
+          </span>
+        </div>
+        
+        <h2 class="modal-title">{{ selectedItem()?.title }}</h2>
+        <p class="modal-description">{{ selectedItem()?.excerpt }}</p>
+      </div>
+    </div>
+  </div>
+}
+
 <!-- News and Events section end -->

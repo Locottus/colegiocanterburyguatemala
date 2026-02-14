@@ -19,6 +19,8 @@ export class Carrusel implements OnInit, OnDestroy {
   protected currentIndex = signal(0);
   protected isTransitioning = signal(false);
   protected isPaused = signal(false);
+  protected showModal = signal(false);
+  protected selectedImage = signal<CarouselImage | null>(null);
   
   private autoPlayInterval: any;
   private readonly autoPlayDelay = 5000;
@@ -142,6 +144,29 @@ export class Carrusel implements OnInit, OnDestroy {
   protected onMouseLeave(): void {
     if (!this.isPaused()) {
       this.startAutoPlay();
+    }
+  }
+
+  protected openModal(image: CarouselImage, event: Event): void {
+    event.stopPropagation();
+    this.selectedImage.set(image);
+    this.showModal.set(true);
+    this.stopAutoPlay();
+    document.body.style.overflow = 'hidden';
+  }
+
+  protected closeModal(): void {
+    this.showModal.set(false);
+    this.selectedImage.set(null);
+    document.body.style.overflow = '';
+    if (!this.isPaused()) {
+      this.startAutoPlay();
+    }
+  }
+
+  protected onModalBackdropClick(event: MouseEvent): void {
+    if (event.target === event.currentTarget) {
+      this.closeModal();
     }
   }
 }

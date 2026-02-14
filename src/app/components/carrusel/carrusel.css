@@ -406,3 +406,177 @@
     border-width: 3px;
   }
 }
+
+/* Carousel Image Clickable */
+.carousel-image {
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.4s ease-in-out;
+}
+
+.carousel-image:hover {
+  transform: scale(1.02);
+}
+
+/* Modal Styles for Image Viewer */
+.carousel-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel-modal-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.carousel-modal-close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  color: #1a3a5c;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10001;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.carousel-modal-close-btn:hover {
+  background: #f8f9fa;
+  transform: scale(1.1) rotate(90deg);
+}
+
+.carousel-modal-image {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-modal-caption {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.carousel-modal-caption p {
+  margin: 0;
+  color: #1a3a5c;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Modal Responsive */
+@media (max-width: 768px) {
+  .carousel-modal-backdrop {
+    padding: 15px;
+  }
+
+  .carousel-modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  .carousel-modal-image {
+    max-height: 75vh;
+    border-radius: 8px;
+  }
+
+  .carousel-modal-caption {
+    margin-top: 15px;
+    padding: 12px 20px;
+  }
+
+  .carousel-modal-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-modal-backdrop {
+    padding: 10px;
+  }
+
+  .carousel-modal-close-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .carousel-modal-image {
+    max-height: 70vh;
+  }
+
+  .carousel-modal-caption {
+    padding: 10px 15px;
+  }
+
+  .carousel-modal-caption p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-modal-backdrop,
+  .carousel-modal-content {
+    animation: none;
+  }
+  
+  .carousel-modal-close-btn:hover {
+    transform: scale(1.1);
+  }
+}

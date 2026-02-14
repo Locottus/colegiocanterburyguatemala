@@ -44,8 +44,12 @@
                 [alt]="image.alt"
                 [class.loaded]="image.loaded"
                 (load)="onImageLoad(i)"
+                (click)="openModal(image, $event)"
                 loading="lazy"
-                class="carousel-image" />
+                class="carousel-image"
+                role="button"
+                tabindex="0"
+                [attr.aria-label]="'Ver imagen en tamaño completo: ' + image.alt" />
 
               <!-- Overlay con gradiente -->
               <div class="slide-overlay"></div>
@@ -103,3 +107,21 @@
     </div>
   </div>
 </section>
+
+<!-- Modal para vista ampliada de la imagen -->
+@if (showModal() && selectedImage()) {
+  <div class="carousel-modal-backdrop" (click)="onModalBackdropClick($event)" role="dialog" aria-modal="true"
+       [attr.aria-label]="'Vista ampliada: ' + selectedImage()?.alt">
+    <div class="carousel-modal-content">
+      <button class="carousel-modal-close-btn" (click)="closeModal()" aria-label="Cerrar vista ampliada">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      
+      <img [src]="selectedImage()?.src" [alt]="selectedImage()?.alt" class="carousel-modal-image">
+      
+      <div class="carousel-modal-caption">
+        <p>{{ selectedImage()?.alt }}</p>
+      </div>
+    </div>
+  </div>
+}
