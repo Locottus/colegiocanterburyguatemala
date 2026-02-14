@@ -66,11 +66,11 @@ export class TranslationService {
         aboutUsTitle: 'Colegio Episcopal Canterbury Villanovano',
         aboutUsText: 'Somos una institución educativa comprometida con la excelencia académica y la formación integral de nuestros estudiantes. Ubicados en Villa Nueva, Guatemala, ofrecemos una educación de calidad basada en valores cristianos y principios episcopales.',
         mission: 'Misión',
-        missionText: 'Formar estudiantes íntegros, con excelencia académica y valores sólidos, preparados para enfrentar los desafíos del futuro.',
+        missionText: 'Somos una institución educativa cristiana comprometida con la formación integral de niños, niñas y jóvenes en los niveles de preprimaria, primaria, básicos y diversificado. Fundamentamos nuestro quehacer educativo en los principios y valores de la fe cristiana, promoviendo una educación basada en el amor, la verdad, la justicia, el respeto y la responsabilidad. Orientamos nuestros esfuerzos hacia la excelencia académica mediante una propuesta pedagógica participativa, estructurada y actualizada, que integra el desarrollo del pensamiento crítico, el dominio de competencias científicas y tecnológicas, y la formación moral y espiritual de nuestros estudiantes, preparándolos para enfrentar con madurez y liderazgo los desafíos del mundo contemporáneo.',
         vision: 'Visión',
-        visionText: 'Ser reconocidos como la institución educativa líder en Guatemala, destacada por la calidad académica y formación en valores.',
+        visionText: 'Consolidarnos como una institución educativa de reconocido prestigio, distinguida por su excelencia académica y por la formación integral de personas con sólidos principios cristianos, capaces de liderar con ética, compromiso y responsabilidad en los ámbitos científico, social, cultural y deportivo, contribuyendo de manera significativa a la transformación de la sociedad.',
         values: 'Valores',
-        valuesText: 'Excelencia, Integridad, Respeto, Responsabilidad, Innovación'
+        valuesText: 'Amor, Honestidad y Veracidad, Justicia y Equidad, Respeto y Tolerancia, Paz y Fraternidad, Solidaridad y Generosidad, Responsabilidad y Lealtad, Disciplina y Puntualidad, Humildad, Perseverancia y Laboriosidad, Bondad y Alegría'
       },
       educationalLevels: {
         title: 'Nuestros Niveles Educativos',
@@ -134,11 +134,11 @@ export class TranslationService {
         aboutUsTitle: 'Canterbury Villanovano Episcopal School',
         aboutUsText: 'We are an educational institution committed to academic excellence and comprehensive training of our students. Located in Villa Nueva, Guatemala, we offer quality education based on Christian values and Episcopal principles.',
         mission: 'Mission',
-        missionText: 'To form integral students with academic excellence and solid values, prepared to face future challenges.',
+        missionText: 'We are a Christian educational institution committed to the comprehensive formation of children and young people at preschool, elementary, middle school and high school levels. We base our educational work on the principles and values of the Christian faith, promoting education based on love, truth, justice, respect and responsibility. We direct our efforts toward academic excellence through a participatory, structured and updated pedagogical approach that integrates the development of critical thinking, mastery of scientific and technological skills, and moral and spiritual formation of our students, preparing them to face with maturity and leadership the challenges of the contemporary world.',
         vision: 'Vision',
-        visionText: 'To be recognized as the leading educational institution in Guatemala, distinguished by academic quality and values formation.',
+        visionText: 'To establish ourselves as an educational institution of recognized prestige, distinguished by its academic excellence and by the comprehensive formation of people with solid Christian principles, capable of leading with ethics, commitment and responsibility in the scientific, social, cultural and sports fields, contributing significantly to the transformation of society.',
         values: 'Values',
-        valuesText: 'Excellence, Integrity, Respect, Responsibility, Innovation'
+        valuesText: 'Love, Honesty and Truthfulness, Justice and Equity, Respect and Tolerance, Peace and Fraternity, Solidarity and Generosity, Responsibility and Loyalty, Discipline and Punctuality, Humility, Perseverance and Industriousness, Kindness and Joy'
       },
       educationalLevels: {
         title: 'Our Educational Levels',
@@ -202,11 +202,11 @@ export class TranslationService {
         aboutUsTitle: 'Collège Episcopal Canterbury Villanovano',
         aboutUsText: 'Nous sommes une institution éducative engagée dans l\'excellence académique et la formation intégrale de nos élèves. Situés à Villa Nueva, Guatemala, nous offrons une éducation de qualité basée sur les valeurs chrétiennes et les principes épiscopaux.',
         mission: 'Mission',
-        missionText: 'Former des élèves intègres, avec excellence académique et valeurs solides, préparés à relever les défis futurs.',
+        missionText: 'Nous sommes une institution éducative chrétienne engagée dans la formation intégrale des enfants et des jeunes aux niveaux préscolaire, primaire, collège et lycée. Nous fondons notre travail éducatif sur les principes et valeurs de la foi chrétienne, promouvant une éducation basée sur l\'amour, la vérité, la justice, le respect et la responsabilité. Nous orientons nos efforts vers l\'excellence académique à travers une approche pédagogique participative, structurée et actualisée qui intègre le développement de la pensée critique, la maîtrise des compétences scientifiques et technologiques, et la formation morale et spirituelle de nos élèves, les préparant à affronter avec maturité et leadership les défis du monde contemporain.',
         vision: 'Vision',
-        visionText: 'Être reconnu comme l\'institution éducative leader au Guatemala, distinguée par la qualité académique et la formation en valeurs.',
+        visionText: 'Nous consolider en tant qu\'institution éducative de prestige reconnu, distinguée par son excellence académique et par la formation intégrale de personnes aux solides principes chrétiens, capables de diriger avec éthique, engagement et responsabilité dans les domaines scientifique, social, culturel et sportif, contribuant de manière significative à la transformation de la société.',
         values: 'Valeurs',
-        valuesText: 'Excellence, Intégrité, Respect, Responsabilité, Innovation'
+        valuesText: 'Amour, Honnêteté et Véracité, Justice et Équité, Respect et Tolérance, Paix et Fraternité, Solidarité et Générosité, Responsabilité et Loyauté, Discipline et Ponctualité, Humilité, Persévérance et Labeur, Bonté et Joie'
       },
       educationalLevels: {
         title: 'Nos Niveaux Éducatifs',
@@ -270,11 +270,11 @@ export class TranslationService {
         aboutUsTitle: 'Colégio Episcopal Canterbury Villanovano',
         aboutUsText: 'Somos uma instituição educacional comprometida com a excelência acadêmica e a formação integral dos nossos alunos. Localizados em Villa Nueva, Guatemala, oferecemos educação de qualidade baseada em valores cristãos e princípios episcopais.',
         mission: 'Missão',
-        missionText: 'Formar alunos íntegros, com excelência acadêmica e valores sólidos, preparados para enfrentar os desafios futuros.',
+        missionText: 'Somos uma instituição educacional cristã comprometida com a formação integral de crianças e jovens nos níveis de pré-escola, ensino fundamental, ensino médio inicial e ensino médio superior. Fundamentamos nosso trabalho educacional nos princípios e valores da fé cristã, promovendo uma educação baseada no amor, na verdade, na justiça, no respeito e na responsabilidade. Orientamos nossos esforços para a excelência acadêmica através de uma proposta pedagógica participativa, estruturada e atualizada, que integra o desenvolvimento do pensamento crítico, o domínio de competências científicas e tecnológicas, e a formação moral e espiritual dos nossos alunos, preparando-os para enfrentar com maturidade e liderança os desafios do mundo contemporâneo.',
         vision: 'Visão',
-        visionText: 'Ser reconhecido como a instituição educacional líder na Guatemala, destacada pela qualidade acadêmica e formação em valores.',
+        visionText: 'Consolidar-nos como uma instituição educacional de reconhecido prestígio, distinguida por sua excelência acadêmica e pela formação integral de pessoas com sólidos princípios cristãos, capazes de liderar com ética, compromisso e responsabilidade nos âmbitos científico, social, cultural e esportivo, contribuindo de maneira significativa para a transformação da sociedade.',
         values: 'Valores',
-        valuesText: 'Excelência, Integridade, Respeito, Responsabilidade, Inovação'
+        valuesText: 'Amor, Honestidade e Veracidade, Justiça e Equidade, Respeito e Tolerância, Paz e Fraternidade, Solidariedade e Generosidade, Responsabilidade e Lealdade, Disciplina e Pontualidade, Humildade, Perseverança e Laboriosidade, Bondade e Alegria'
       },
       educationalLevels: {
         title: 'Nossos Níveis Educacionais',
@@ -338,11 +338,11 @@ export class TranslationService {
         aboutUsTitle: 'Canterbury Villanovano Episcopal Schule',
         aboutUsText: 'Wir sind eine Bildungseinrichtung, die sich der akademischen Exzellenz und der umfassenden Ausbildung unserer Schüler verpflichtet hat. In Villa Nueva, Guatemala gelegen, bieten wir qualitativ hochwertige Bildung auf der Grundlage christlicher Werte und episkopaler Prinzipien.',
         mission: 'Mission',
-        missionText: 'Integrale Schüler mit akademischer Exzellenz und soliden Werten zu bilden, die darauf vorbereitet sind, zukünftige Herausforderungen zu meistern.',
+        missionText: 'Wir sind eine christliche Bildungseinrichtung, die sich der umfassenden Bildung von Kindern und Jugendlichen auf Vorschul-, Grundschul-, Mittelschul- und Oberstufenniveau verpflichtet hat. Wir gründen unsere Bildungsarbeit auf die Prinzipien und Werte des christlichen Glaubens und fördern eine Bildung, die auf Liebe, Wahrheit, Gerechtigkeit, Respekt und Verantwortung basiert. Wir richten unsere Bemühungen auf akademische Exzellenz durch einen partizipativen, strukturierten und aktualisierten pädagogischen Ansatz, der die Entwicklung kritischen Denkens, die Beherrschung wissenschaftlicher und technologischer Kompetenzen sowie die moralische und spirituelle Bildung unserer Schüler integriert und sie darauf vorbereitet, mit Reife und Führungsstärke die Herausforderungen der zeitgenössischen Welt zu meistern.',
         vision: 'Vision',
-        visionText: 'Als führende Bildungseinrichtung in Guatemala anerkannt zu werden, die sich durch akademische Qualität und Wertebildung auszeichnet.',
+        visionText: 'Uns als Bildungseinrichtung von anerkanntem Prestige zu etablieren, die sich durch akademische Exzellenz und durch die umfassende Bildung von Menschen mit soliden christlichen Prinzipien auszeichnet, die in der Lage sind, mit Ethik, Engagement und Verantwortung im wissenschaftlichen, sozialen, kulturellen und sportlichen Bereich zu führen und wesentlich zur Transformation der Gesellschaft beizutragen.',
         values: 'Werte',
-        valuesText: 'Exzellenz, Integrität, Respekt, Verantwortung, Innovation'
+        valuesText: 'Liebe, Ehrlichkeit und Wahrhaftigkeit, Gerechtigkeit und Gleichheit, Respekt und Toleranz, Frieden und Brüderlichkeit, Solidarität und Großzügigkeit, Verantwortung und Loyalität, Disziplin und Pünktlichkeit, Demut, Ausdauer und Fleiß, Güte und Freude'
       },
       educationalLevels: {
         title: 'Unsere Bildungsstufen',

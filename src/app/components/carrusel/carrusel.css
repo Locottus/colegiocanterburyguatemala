@@ -193,24 +193,23 @@
 
 /* Indicators */
 .carousel-indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 3;
+  display: none; /* Ocultar los bullets del carrusel */
+}
+
+.carousel-indicators::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .indicator-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border: 2px solid #fff;
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
+  flex-shrink: 0; /* Evita que se reduzcan */
 }
 
 .indicator-dot:hover {
@@ -220,7 +219,7 @@
 
 .indicator-dot.active {
   background: #fff;
-  width: 30px;
+  width: 28px;
   border-radius: 6px;
 }
 
@@ -306,6 +305,12 @@
   .carousel-controls {
     padding: 0 15px;
   }
+
+  .carousel-indicators {
+    gap: 8px;
+    max-width: 88%;
+    padding: 9px 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -353,16 +358,18 @@
 
   .carousel-indicators {
     bottom: 15px;
-    gap: 8px;
+    gap: 6px;
+    max-width: 85%;
+    padding: 8px 12px;
   }
 
   .indicator-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 
   .indicator-dot.active {
-    width: 24px;
+    width: 20px;
   }
 }
 
@@ -379,6 +386,21 @@
     width: 30px;
     height: 30px;
     font-size: 0.8rem;
+  }
+
+  .carousel-indicators {
+    gap: 5px;
+    max-width: 80%;
+    padding: 6px 10px;
+  }
+
+  .indicator-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .indicator-dot.active {
+    width: 18px;
   }
 }
 
