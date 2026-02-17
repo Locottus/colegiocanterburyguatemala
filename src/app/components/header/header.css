@@ -117,6 +117,18 @@
   }
 }
 
+/* Flag icons in language selector */
+.flag-icon {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .navbar-toggler {
   border: 2px solid rgba(255, 255, 255, 0.8);
   padding: 0.5rem;

@@ -41,13 +41,13 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" (click)="toggleLanguageMenu()" aria-expanded="false">
-            <i class="fas fa-globe me-1" aria-hidden="true"></i>{{ getCurrentLanguage()?.flag }} {{ getCurrentLanguage()?.name }}
+            <i class="fas fa-globe me-1" aria-hidden="true"></i><img [src]="getCurrentLanguage()?.flag" [alt]="getCurrentLanguage()?.name" class="flag-icon" />{{ getCurrentLanguage()?.name }}
           </a>
           <ul class="dropdown-menu dropdown-menu-end" [class.show]="isLanguageMenuOpen()">
             @for (lang of translationService.availableLanguages; track lang.code) {
               <li>
                 <a class="dropdown-item" href="#" (click)="changeLanguage(lang.code); $event.preventDefault()">
-                  {{ lang.flag }} {{ lang.name }}
+                  <img [src]="lang.flag" [alt]="lang.name" class="flag-icon" />{{ lang.name }}
                 </a>
               </li>
             }

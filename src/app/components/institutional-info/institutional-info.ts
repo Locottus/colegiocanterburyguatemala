@@ -34,13 +34,13 @@ export class InstitutionalInfo {
   ]);
 
   features = signal<string[]>([
-    'Educación bilingüe de calidad',
-    'Instalaciones modernas y seguras',
-    'Personal docente calificado',
-    'Tecnología educativa avanzada',
-    'Actividades extracurriculares',
-    'Atención personalizada',
-    'Valores cristianos',
-    'Formación integral'
+    'features.bilingual',
+    'features.facilities',
+    'features.teachers',
+    'features.technology',
+    'features.extracurricular',
+    'features.personalized',
+    'features.values',
+    'features.comprehensive'
   ]);
 }

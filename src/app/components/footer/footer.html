@@ -2,15 +2,18 @@
   <div class="container">
     <div class="row py-5">
       <!-- Información del Colegio -->
+
+<!--
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="d-flex align-items-center mb-3">
           <img src="logo.png" alt="Colegio Episcopal Canterbury Villanovano Logo" class="footer-logo me-3">
           <h3 class="h5 fw-bold mb-0">Colegio Episcopal Canterbury Villanovano</h3>
         </div>
         <p class="mb-3">
-          Institución educativa privada comprometida con la excelencia académica 
-          y la formación integral desde Párvulos hasta Diversificado.
+          Institución educativa comprometida con la excelencia académica 
+          y la formación integral.
         </p>
+
         <div class="social-links">
           @for (social of socialLinks(); track social.name) {
             <a [href]="social.url" 
@@ -22,9 +25,11 @@
             </a>
           }
         </div>
-      </div>
       
+      </div>
+    -->
       <!-- Enlaces Rápidos -->
+      <!--
       <div class="col-lg-2 col-md-6 mb-4">
         <h3 class="h5 fw-bold mb-4">
           <i class="fas fa-link me-2" aria-hidden="true"></i>
@@ -40,9 +45,9 @@
           }
         </ul>
       </div>
-      
+      -->
       <!-- Contacto -->
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-6 col-md-6 mb-4">
         <h3 class="h5 fw-bold mb-4">
           <i class="fas fa-phone me-2" aria-hidden="true"></i>
           {{ translationService.t('footer.contact') }}
@@ -50,38 +55,42 @@
         <ul class="list-unstyled contact-info">
           <li class="mb-3">
             <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>
-            <a href="https://maps.app.goo.gl/KNgpjnb8P2PCGEmU9" target="_blank" rel="noopener noreferrer" class="footer-link">{{ translationService.t('footer.addressText') }}</a>
+            <a href="https://maps.app.goo.gl/KNgpjnb8P2PCGEmU9" target="_blank" rel="noopener noreferrer" class="footer-link">3ra calle 9-01, zona 2 Colonia San José  Villa Nueva</a>
           </li>
           <li class="mb-3">
-            <i class="fas fa-phone-alt me-2" aria-hidden="true"></i>
-            <a href="tel:+50212345678" class="footer-link">+(502) 1234-5678</a>
+            <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
+            <a [href]="'https://wa.me/50252272841'" target="_blank" class="footer-link">{{ translationService.t('footer.coordination') }}: 52272841</a>
+          </li>
+          <li class="mb-3">
+            <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
+            <a [href]="'https://wa.me/50257187879'" target="_blank" class="footer-link">{{ translationService.t('footer.administration') }}: 57187879</a>
           </li>
           <li class="mb-3">
             <i class="fas fa-envelope me-2" aria-hidden="true"></i>
-            <a href="mailto:info@colegiocanterburyguatemala.com" class="footer-link">
-              info@colegiocanterburyguatemala.com
+            <a href="mailto:colegiocanterburyguatemala@protonmail.com" class="footer-link">
+              colegiocanterburyguatemala@protonmail.com
             </a>
           </li>
         </ul>
       </div>
       
       <!-- Horarios -->
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-6 col-md-6 mb-4">
         <h3 class="h5 fw-bold mb-4">
           <i class="fas fa-calendar-alt me-2" aria-hidden="true"></i>
-          Horarios
+          {{ translationService.t('footer.schedule') }}
         </h3>
         <div class="schedule-card p-3 mb-3">
           <p class="mb-2 fw-semibold">
-            <i class="fas fa-school me-2" aria-hidden="true"></i>Clases
+            <i class="fas fa-school me-2" aria-hidden="true"></i>{{ translationService.t('footer.classes') }}
           </p>
-          <p class="small mb-0">Lunes a Viernes<br>7:30 AM - 2:30 PM</p>
+          <p class="small mb-0">{{ translationService.t('footer.mondayToFriday') }}<br>7:30 AM - 2:30 PM</p>
         </div>
         <div class="schedule-card p-3">
           <p class="mb-2 fw-semibold">
-            <i class="fas fa-user-tie me-2" aria-hidden="true"></i>Atención Padres
+            <i class="fas fa-user-tie me-2" aria-hidden="true"></i>{{ translationService.t('footer.parentsAttention') }}
           </p>
-          <p class="small mb-0">Lunes a Viernes<br>8:00 AM - 4:00 PM</p>
+          <p class="small mb-0">{{ translationService.t('footer.mondayToFriday') }}<br>8:00 AM - 4:00 PM</p>
         </div>
       </div>
     </div>
@@ -104,7 +113,7 @@
   </div>
   
   <!-- Botón Scroll to Top -->
-  <a href="#inicio" class="scroll-to-top" aria-label="Volver arriba">
+  <a href="#inicio" class="scroll-to-top" [attr.aria-label]="translationService.t('footer.backToTop')">
     <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </a>
 </footer>
